@@ -4,25 +4,29 @@ en las secciones señaladas */
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
-:root{
+:root {
     /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #000;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--cor-de-fundo);
     font-family: 'Raleway';
     margin: 0;
     padding: 0;
     line-height: 1;
 }
-ol, ul,li {
+
+ol,
+ul,
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: var(--cor-de-link);
 }
@@ -41,92 +45,291 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sección Menu*/
 
-section.menu{
+section.menu {
+    width: 100%;
+    height: 88px;
+    padding: 32px;
+    background-color: aqua;
 
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
 }
 
-/*Sección Title*/
-
-section.title{
-
+.menu__header {
+    width: 1136px; /* Ancho total */
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos del encabezado en los extremos */
+    align-items: center; /* Centra verticalmente los elementos del encabezado */
+    padding: 0 20px; /* Añade espacio interno a los lados del encabezado */
+    background-color: #f5f5f5; /* Color de fondo del encabezado */
 }
 
-/*Sección About*/
-
-section.about{
-
+/* Estilo para el logo en el encabezado */
+.menu__logo {
+    width: 70px; /* Tamaño del logo */
+    height: 40px; /* Mantiene la proporción del logo */
+    margin-right: 10px; /* Margen derecho para separación */
 }
 
-/*Sección Hobbies*/
-
-section.hobbies{
-    
+.menu__title {
+    margin-right: auto;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* Experiencia Académica*/
-
-section.academic{
-
+/* Estilo para la lista del menú */
+.menu__list {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos de la lista del menú */
+    margin-top: 10px; /* Margen superior para separación */
+    font-size: 16px;
+    font-size: medium;
 }
 
-/* experiencia*/
-
-section.experience{
-
+/* Estilo para los elementos de la lista del menú */
+.menu__list__item {
+    margin-right: 20px;
 }
 
-/*Contacto*/
-
-section.formcontato{
-
+/* Estilo para el elemento de contacto en la lista del menú */
+.menu__list__item__contato {
+    margin-left: auto; /* Empuja el elemento de contacto hacia la derecha tanto como sea posible */
 }
 
-/*footeer*/
-
-section.footer{
-   
+.menu__toggle {
+    display: none; /* Oculta el icono de menú */
 }
 
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-/* Menú */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
+/* Sección Título */
+.title {
+    padding: 64px 0;
+    text-align: center;
 }
 
-/*Mobile*/
-@media (min-width: 425px) {
+.title__bio {
+    font-size: 24px;
+    font-weight: 500;
+}
 
-/*Menu*/
+.title__subsection {
+    font-size: 18px;
+}
 
-/*Titulo*/
+.title__network {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
 
-/*Sección sobre mi*/
+.title__network__item {
+    margin: 0 12px;
+}
 
-/*Skills*/
+/* Sección Sobre mí */
+.about {
+    padding: 64px 0;
+}
 
-/*Hobbies*/
- 
-/*Formación Académica*/
+.about__title {
+    font-size: 32px;
+    font-weight: 500;
+}
 
-/*Experiencia Profesional*/
+.about__paragraph {
+    margin-bottom: 24px;
+}
 
- /*Contacto*/
+/* Sección Hobbies */
+.hobbies {
+    padding: 64px 0;
+}
 
-/*Footer*/
+.hobbies__title {
+    font-size: 32px;
+    font-weight: 500;
+}
 
+.hobbies__line {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hobbies__box {
+    flex: 0 0 50%;
+    padding: 16px;
+}
+
+.hobbies__img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Sección Skills */
+.skills {
+    padding: 64px 0;
+}
+
+.skills__title {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.skills__line {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills__box {
+    flex: 0 0 50%;
+    padding: 16px;
+}
+
+.skills__name {
+    margin-top: 8px;
+}
+
+.skills__img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Sección Formación Académica */
+.academic {
+    padding: 64px 0;
+}
+
+.academic__title {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.academic__courses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.academic__courses__box {
+    flex: 0 0 50%;
+    padding: 16px;
+}
+
+.academic__courses__item__img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Sección Experiencia Profesional */
+.experience {
+    padding: 64px 0;
+}
+
+.experience__section__title {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.experience__box {
+    display: flex;
+    margin-top: 32px;
+}
+
+.experience__img {
+    width: 200px;
+    height: 150px;
+    margin-right: 24px;
+}
+
+.experience__info {
+    flex: 1;
+}
+
+.experience__title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.experience__text {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.experience__description {
+    margin-top: 16px;
+}
+
+/* Sección Contacto */
+.formcontato {
+    padding: 64px 0;
+    display: flex;
+    align-items: center;
+}
+
+.formcontato__img {
+    width: 300px;
+    height: auto;
+    margin-right: 64px;
+}
+
+.formcontato__title {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.formcontato__subtext {
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.formcontato__form {
+    margin-top: 32px;
+}
+
+.formcontato__input,
+.formcontato__textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formcontato__botao {
+    padding: 12px 24px;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-link);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Sección Footer */
+.footer {
+    padding: 32px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+
+    .menu__header {
+        width: 80%; /* Ancho total */
+        display: flex;
+        justify-content: space-between; /* Alinea los elementos del encabezado en los extremos */
+        align-items: center; /* Centra verticalmente los elementos del encabezado */
+        padding: 0 20px; /* Añade espacio interno a los lados del encabezado */
+        background-color: #f5f5f5; /* Color de fondo del encabezado */
+    }
+
+    .menu__nav {
+        display: none; /* Oculta el menú de lista */
+    }
+
+    .menu__toggle {
+        display: flex; /* Muestra el icono de menú */
+        justify-content: center; /* Centra horizontalmente el icono */
+        align-items: center; /* Centra verticalmente el icono */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+        color: #000; /* Color del icono (ajusta según tus necesidades) */
+        font-size: 24px; /* Tamaño del icono (ajusta según tus necesidades) */
+    }
 }
