@@ -122,18 +122,16 @@ section.menu {
     justify-content: center; /* Centra horizontalmente en el viewport */
     align-items: center; /* Centra verticalmente en el viewport */
     width: 100%; /* Ocupa todo el ancho disponible del viewport */
-    margin: 0 auto; /* Centra el elemento horizontalmente dentro de su contenedor */
-    padding: 32px;
+    padding: 0 32px;
 }
 
 .title__div {
+    width: 100%; /* Ancho máximo permitido */
+    max-width: 1180px;
+    height: 368px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 0 auto; /* Centrar el contenido horizontalmente */
-    width: 100%; /* Ocupa todo el ancho disponible del viewport */
-    max-width: 1136px; /* Ancho máximo permitido */
-    padding: 0 20px; /* Añade espacio interno a los lados del encabezado */
     background-color: aqua;
 }
 
@@ -141,25 +139,23 @@ section.menu {
     order: 2; /* Cambia el orden del elemento */
     width: 368px; /* Ancho de la imagen del perfil */
     height: 368px; /* Altura automática manteniendo la proporción */
-    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .title__container {
     order: 1; /* Cambia el orden del elemento */
     flex: 1; /* El contenido ocupará el espacio restante */
-    margin: 30px;
 }
 
 .title__bio {
     font-size: 52px;
-    font-weight: 500;
     font-weight: bold;
 }
 
 .title__subsection {
     font-size: 22px;
     margin-bottom: 16px; /* Margen inferior para separación */
-    font-weight: medium;
+    font-weight: normal;
 }
 
 .title__network {
@@ -168,6 +164,7 @@ section.menu {
     align-items: center;
     list-style-type: none;
     padding: 0;
+    margin-top: 30px;
 }
 
 .title__network__item a {
@@ -181,7 +178,16 @@ section.menu {
 
 /* *Sección Sobre mí */
 .about {
-    padding: 64px 0;
+    background-color: #EAF2FD;
+    height: 383px;
+    display: flex;
+    justify-content: center;
+}
+
+.about__container {
+    width: 1136px;
+    height: 255px;
+    background-color: red;
 }
 
 .about__title {
