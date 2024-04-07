@@ -18,6 +18,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
+    /*  overflow-x: hidden; /* Esconde barra de rolagem horizontal */
 }
 
 ol,
@@ -43,11 +44,12 @@ con una interfaz de usuario compleja, y permite la reutilización del código ex
 Enlace de la documentación oficial!
 https://en.bem.info/methodology/quick-start/*/
 
+
 /*Sección Menu*/
 
 section.menu {
     width: 100%;
-    height: 88px;
+    
     padding: 0 32px;
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido */
@@ -55,13 +57,20 @@ section.menu {
 }
 
 .menu__header {
-    width: 1136px; /* Ancho total */
+    width: 100%; /* Ocupa todo el ancho disponible del viewport */
+    max-width: 1136px; /* Ancho máximo permitido */
+    height: 88px;
     display: flex;
     justify-content: space-between; /* Alinea los elementos del encabezado en los extremos */
     align-items: center; /* Centra verticalmente los elementos del encabezado */
-    padding: 0 20px; /* Añade espacio interno a los lados del encabezado */
+     /* Añade espacio interno a los lados del encabezado */
     background-color: #ffffff; /* Color de fondo del encabezado */
     margin-top: 0; /* Elimina el margen superior */
+
+    padding: 0 20px; /* Añade espacio interno a los lados del encabezado */
+
+    /* Centra y distribuye el espacio equitativamente */
+    margin: 0 auto; /* Centra el encabezado horizontalmente */
 }
 
 /* Estilo para el logo en el encabezado */
@@ -107,32 +116,70 @@ section.menu {
     margin-left: auto; /* Empuja el elemento de contacto hacia la derecha tanto como sea posible */
 }
 
-/* Sección Título */
+/* *Sección Título */
 .title {
-    padding: 64px 0;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente en el viewport */
+    align-items: center; /* Centra verticalmente en el viewport */
+    width: 100%; /* Ocupa todo el ancho disponible del viewport */
+    margin: 0 auto; /* Centra el elemento horizontalmente dentro de su contenedor */
+    padding: 32px;
+}
+
+.title__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    width: 100%; /* Ocupa todo el ancho disponible del viewport */
+    max-width: 1136px; /* Ancho máximo permitido */
+    padding: 0 20px; /* Añade espacio interno a los lados del encabezado */
+    background-color: aqua;
+}
+
+.title__profile {
+    order: 2; /* Cambia el orden del elemento */
+    width: 368px; /* Ancho de la imagen del perfil */
+    height: 368px; /* Altura automática manteniendo la proporción */
+    margin-top: 20px;
+}
+
+.title__container {
+    order: 1; /* Cambia el orden del elemento */
+    flex: 1; /* El contenido ocupará el espacio restante */
+    margin: 30px;
 }
 
 .title__bio {
-    font-size: 24px;
+    font-size: 52px;
     font-weight: 500;
+    font-weight: bold;
 }
 
 .title__subsection {
-    font-size: 18px;
+    font-size: 22px;
+    margin-bottom: 16px; /* Margen inferior para separación */
+    font-weight: medium;
 }
 
 .title__network {
     display: flex;
-    justify-content: center;
-    margin-top: 24px;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
 }
 
-.title__network__item {
-    margin: 0 12px;
+.title__network__item a {
+    text-decoration: none;
+    color: #333; /* Color del texto */
+    display: flex;
+    align-items: center;
 }
 
-/* Sección Sobre mí */
+
+
+/* *Sección Sobre mí */
 .about {
     padding: 64px 0;
 }
