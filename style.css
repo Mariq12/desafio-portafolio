@@ -211,7 +211,63 @@ section.menu {
     margin-bottom: 5px;
 }
 
-/* Sección Hobbies */
+/* *Sección Skills */
+.skills {
+    display: flex;
+    flex-direction: column; /* Cambia la disposición a columna */
+    justify-content: center; /* Centra verticalmente en el viewport */
+    align-items: center; /* Centra horizontalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1140px; /* Ancho máximo permitido */
+    background-color: gold;
+    height: 244px; /* Usar altura completa del viewport */
+    margin: 0 auto ; /* Centra el elemento horizontalmente en la pantalla */
+    padding: 0 20px;
+    margin-left: 118px;
+    margin-top: 25px;
+}
+
+.skills__title {
+    font-size: 32px;
+    font-weight: 500;
+    background-color: pink;
+    margin-bottom: 24px; /* Espaciado inferior */
+    margin-top: 5px;
+}
+
+.skills__line {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos con espacio proporcional */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente a la línea */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1180px; /* Ancho máximo permitido */
+}
+
+.skills__box {
+    display: flex;
+    flex-direction: column; /* Cambia la disposición a columna */
+    align-items: center; /* Centra horizontalmente */
+    width: 176px;
+    height: 174px;
+    color: #e02626;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.skills__name {
+    margin-top: 8px;
+    background-color: #ffffff;
+}
+
+.skills__img {
+    width: 48px;
+    height: 48px;
+    background-color: #ccc;
+}
+
+
+/* *Sección Hobbies */
 .hobbies {
     padding: 64px 0;
 }
@@ -232,35 +288,6 @@ section.menu {
 }
 
 .hobbies__img {
-    width: 48px;
-    height: 48px;
-}
-
-/* Sección Skills */
-.skills {
-    padding: 64px 0;
-}
-
-.skills__title {
-    font-size: 32px;
-    font-weight: 500;
-}
-
-.skills__line {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.skills__box {
-    flex: 0 0 50%;
-    padding: 16px;
-}
-
-.skills__name {
-    margin-top: 8px;
-}
-
-.skills__img {
     width: 48px;
     height: 48px;
 }
