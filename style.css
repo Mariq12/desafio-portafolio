@@ -317,6 +317,11 @@ section.menu {
 
 /* *** Estilos para dispositivos con ancho máximo de 900px *** */
 @media screen and (max-width: 900px) {
+     /* Estilo para el icono de menú */
+    .menu__toggle {
+        margin-right: 20px;
+    }
+    /* Estilo para el menú de navegación */
     .menu__nav {
         display: none; /* Ocultar el menú principal por defecto en dispositivos pequeños */
         width: 25%; /* Ocupar todo el ancho disponible */
@@ -328,7 +333,7 @@ section.menu {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
         z-index: 1; /* Asegurar que esté encima de otros elementos */
     }
-
+    /* Estilo para la lista de elementos del menú */
     .menu__list {
         display: flex;
         justify-content: flex-start;
@@ -337,7 +342,6 @@ section.menu {
         list-style-type: none;
         align-items: flex-start; /* Alinear los elementos a la izquierda */
     }
-
     .menu__list__item,
     .menu__list__item__contato {
         margin-bottom: 5px;
@@ -348,14 +352,12 @@ section.menu {
         padding: 8px; /* Ajustar el padding para aumentar el tamaño del área de clic */
         height: auto; /* Ajustar la altura automáticamente según el contenido */
     }
-
     .menu__list__item:hover,
     .menu__list__item__contato:hover {
         background-color: #ddd; /* Cambiar color de fondo en hover */
         border-radius: 5px;
         
     }
-
     /* Mostrar el menú principal cuando tiene la clase 'show' */
     .menu__nav.show {
         display: block;
