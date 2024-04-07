@@ -179,13 +179,20 @@ section.menu {
 /* *Sección Sobre mí */
 .about {
     background-color: #EAF2FD;
-    height: 383px;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra horizontalmente en el viewport */
+    align-items: center; /* Centra verticalmente en el viewport */
+    width: 100%; /* Ocupa todo el ancho disponible del viewport */
+    padding: 0 32px;
 }
 
 .about__container {
-    width: 1136px;
+    display: flex;
+    flex-direction: column; /* Cambia a disposición en columna */
+    justify-content: center;
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    width: 100%; /* Ancho máximo permitido */
+    max-width: 1180px;
     height: 255px;
     background-color: red;
 }
@@ -193,10 +200,12 @@ section.menu {
 .about__title {
     font-size: 32px;
     font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
 
 .about__paragraph {
-    margin-bottom: 24px;
+    margin-bottom: 5px;
 }
 
 /* Sección Hobbies */
