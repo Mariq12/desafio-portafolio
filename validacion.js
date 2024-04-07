@@ -1,27 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu__toggle');
-    const menuNav = document.querySelector('.menu__nav');
+    const menuNav = document.querySelector('.menu__nav'); // Seleccionar el contenedor del menú
     const menuList = document.querySelector('.menu__list');
 
     // Función para abrir/cerrar el menú al hacer clic en el icono de menú
     menuToggle.addEventListener('click', function() {
-        // Toggle para mostrar/ocultar la lista completa al hacer clic en el icono de menú
-        menuNav.classList.toggle('open');
-
-        if (menuNav.classList.contains('open')) {
-            // Si el menú está abierto, crear una lista desplegable en una sola columna
-            menuList.style.display = 'block'; // Mostrar la lista
-            menuList.style.flexDirection = 'column'; // Establecer dirección de columna
-            menuList.style.alignItems = 'flex-start'; // Alinear elementos al inicio
-
-            // Ajustar el tamaño de la lista para mostrar 7 filas
-            menuList.style.height = 'auto'; // Reiniciar altura
-            menuList.style.maxHeight = 'calc(100vh - 100px)'; // Limitar altura a 7 filas
-            menuList.style.overflowY = 'auto'; // Habilitar desplazamiento vertical si es necesario
-        } else {
-            // Si el menú está cerrado, ocultar la lista
-            menuList.style.display = 'none';
-        }
+        // Toggle para mostrar/ocultar el menú completo al hacer clic en el icono de menú
+        menuNav.style.display = menuNav.style.display === 'block' ? 'none' : 'block';
     });
 
     // Función para gestionar la visualización del menú y el icono basado en el ancho de la pantalla
@@ -42,3 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('resize', toggleMenuDisplay); // Ejecutar al cambiar el tamaño de la pantalla
 });
+
+
+
+function toggleMenu() {
+    var menuNav = document.getElementById("menuNav");
+    if (menuNav.style.display === "block") {
+        menuNav.style.display = "none";
+    } else {
+        menuNav.style.display = "block";
+    }
+}

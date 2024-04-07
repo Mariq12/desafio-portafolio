@@ -48,9 +48,7 @@ https://en.bem.info/methodology/quick-start/*/
 section.menu {
     width: 100%;
     height: 88px;
-    padding: 32px;
-    background-color: aqua;
-
+    padding: 0 32px;
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido */
     align-items: center; /* Centra verticalmente el contenido */
@@ -62,7 +60,8 @@ section.menu {
     justify-content: space-between; /* Alinea los elementos del encabezado en los extremos */
     align-items: center; /* Centra verticalmente los elementos del encabezado */
     padding: 0 20px; /* Añade espacio interno a los lados del encabezado */
-    background-color: #f5f5f5; /* Color de fondo del encabezado */
+    background-color: #ffffff; /* Color de fondo del encabezado */
+    margin-top: 0; /* Elimina el margen superior */
 }
 
 /* Estilo para el logo en el encabezado */
@@ -78,6 +77,16 @@ section.menu {
     font-weight: bold;
 }
 
+.menu__toggle {
+    display: none; /* Oculta el icono de menú */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.menu__nav {
+    display: block; /* Mostrar el menú en pantallas grandes por defecto */
+}
+
+
 /* Estilo para la lista del menú */
 .menu__list {
     display: flex;
@@ -85,6 +94,7 @@ section.menu {
     margin-top: 10px; /* Margen superior para separación */
     font-size: 16px;
     font-size: medium;
+    list-style-type: none;
 }
 
 /* Estilo para los elementos de la lista del menú */
@@ -95,10 +105,6 @@ section.menu {
 /* Estilo para el elemento de contacto en la lista del menú */
 .menu__list__item__contato {
     margin-left: auto; /* Empuja el elemento de contacto hacia la derecha tanto como sea posible */
-}
-
-.menu__toggle {
-    display: none; /* Oculta el icono de menú */
 }
 
 /* Sección Título */
@@ -309,27 +315,49 @@ section.menu {
     text-align: center;
 }
 
+/* *** Estilos para dispositivos con ancho máximo de 900px *** */
 @media screen and (max-width: 900px) {
-
-    .menu__header {
-        width: 80%; /* Ancho total */
-        display: flex;
-        justify-content: space-between; /* Alinea los elementos del encabezado en los extremos */
-        align-items: center; /* Centra verticalmente los elementos del encabezado */
-        padding: 0 20px; /* Añade espacio interno a los lados del encabezado */
-        background-color: #f5f5f5; /* Color de fondo del encabezado */
-    }
-
     .menu__nav {
-        display: none; /* Oculta el menú de lista */
+        display: none; /* Ocultar el menú principal por defecto en dispositivos pequeños */
+        width: 25%; /* Ocupar todo el ancho disponible */
+        position: absolute; /* Posicionar de manera absoluta */
+        top: 90px; /* Distancia desde la parte superior */
+        right: 0; /* Pegar al borde derecho */
+        background-color: #f8f9fa; /* Color de fondo */
+        padding: 20px 20px 0 20px; /* Espaciado interno */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+        z-index: 1; /* Asegurar que esté encima de otros elementos */
     }
 
-    .menu__toggle {
-        display: flex; /* Muestra el icono de menú */
-        justify-content: center; /* Centra horizontalmente el icono */
-        align-items: center; /* Centra verticalmente el icono */
-        cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
-        color: #000; /* Color del icono (ajusta según tus necesidades) */
-        font-size: 24px; /* Tamaño del icono (ajusta según tus necesidades) */
+    .menu__list {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 0;
+        list-style-type: none;
+        align-items: flex-start; /* Alinear los elementos a la izquierda */
+    }
+
+    .menu__list__item,
+    .menu__list__item__contato {
+        margin-bottom: 5px;
+        align-self: flex-start; /* Alinear cada elemento a la izquierda */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        transition: background-color 0.3s ease; /* Transición para cambiar el color de fondo */
+        height: 15px;
+        padding: 8px; /* Ajustar el padding para aumentar el tamaño del área de clic */
+        height: auto; /* Ajustar la altura automáticamente según el contenido */
+    }
+
+    .menu__list__item:hover,
+    .menu__list__item__contato:hover {
+        background-color: #ddd; /* Cambiar color de fondo en hover */
+        border-radius: 5px;
+        
+    }
+
+    /* Mostrar el menú principal cuando tiene la clase 'show' */
+    .menu__nav.show {
+        display: block;
     }
 }
