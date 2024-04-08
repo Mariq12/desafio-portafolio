@@ -595,10 +595,21 @@ section.formcontato {
     cursor: pointer;
 }
 
-/* Sección Footer */
-.footer {
-    padding: 32px 0;
+/* Sección Footer */.footer {
+    height: 102px;
+    font-size: 16px;
+    font-weight: medium;
     text-align: center;
+    background-color: #e02626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer__rodape {
+    /* Estilos adicionales para el contenido dentro del footer */
+    color: white; /* Color del texto */
 }
 
 /* *** Estilos para dispositivos con ancho máximo de 900px *** */
