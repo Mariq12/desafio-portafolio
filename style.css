@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
-    /*  overflow-x: hidden; /* Esconde barra de rolagem horizontal */
+    overflow-x: hidden; /* Esconde barra de rolagem horizontal */
 }
 
 ol,
@@ -49,7 +49,6 @@ https://en.bem.info/methodology/quick-start/*/
 
 section.menu {
     width: 100%;
-    
     padding: 0 32px;
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido */
@@ -265,9 +264,6 @@ section.menu {
     background-color: #ffffff;
 }
 
-
-
-
 /* *Sección Hobbies */
 .hobbies {
     display: flex;
@@ -322,32 +318,97 @@ section.menu {
     background-color: #ffffff;
 }
 
-/* Sección Formación Académica */
+/* *Sección Formación Académica */
 .academic {
-    padding: 64px 0;
+    display: flex;
+    flex-direction: column; /* Cambia la disposición a columna */
+    justify-content: center; /* Centra verticalmente en el viewport */
+    align-items: center; /* Centra horizontalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    background-color: #EAF2FD;
+    height: 581px; /* Usar altura completa del viewport */
 }
 
 .academic__title {
     font-size: 32px;
     font-weight: 500;
+    margin-bottom: 24px; /* Espaciado inferior */
+    margin-top: 0;
+    background-color: palevioletred;
 }
 
 .academic__courses {
     display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
     flex-wrap: wrap;
+    max-width: 1136px;
+    background-color: yellow;
+    height: 347px;
+     padding: 20px; /* Ajusta el relleno interior */
 }
 
 .academic__courses__box {
-    flex: 0 0 50%;
-    padding: 16px;
+    width: 340px;
+    background-color: #122ceb;
+    height: 347px;
+    margin: 10px; /* Espaciado entre las cajas */
+    margin-top: 20px;
+
+}
+
+.academic__courses__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Distribuye los elementos uniformemente */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    width: 100%;
+    height: 286px;
+    padding: 0;    
+}
+
+.academic__courses__item {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente el contenido */
+    width: 100%;
+    background-color: #e21313;
+    height: 132px;
+    margin-top: 95px;
+    margin-bottom: 25px;
 }
 
 .academic__courses__item__img {
-    width: 48px;
-    height: 48px;
+    width: 192px;
+    height: 130px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente la imagen */
+    align-items: flex-end; /* Centra verticalmente la imagen */
+    background-color: #ffffff;
 }
 
-/* Sección Experiencia Profesional */
+.academic__courses__item__datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido hacia arriba */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    background-color: #ea1ef8;
+
+}
+
+.academic__courses__item__title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.academic__courses__item__subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0; /* Establece margen a cero para eliminar cualquier espacio adicional */
+}
+
+
+/* *Sección Experiencia Profesional */
 .experience {
     padding: 64px 0;
 }
