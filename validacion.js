@@ -38,3 +38,29 @@ function toggleMenu() {
         menuNav.style.display = "block";
     }
 }
+
+
+    // Definimos una función para cambiar la posición de las imágenes
+    function alternarPosiciones() {
+        const boxes = document.querySelectorAll('.experience__box');
+
+        boxes.forEach((box, index) => {
+            // Comprobamos si el índice es par o impar para decidir la posición de la imagen
+            if (index % 2 === 0) {
+                // Índice par: imagen a la izquierda
+                box.style.flexDirection = 'row-reverse'; // Invierte la disposición fila
+                box.querySelector('.experience__img').style.marginRight = '0'; // Elimina el margen derecho
+                box.querySelector('.experience__info-container').style.textAlign = 'right'; // Alinea el texto a la derecha
+            } else {
+                // Índice impar: imagen a la derecha (manteniendo la disposición predeterminada)
+                box.style.flexDirection = 'row'; // Restaura la disposición fila
+                box.querySelector('.experience__img').style.marginRight = '24px'; // Restaura el margen derecho
+                box.querySelector('.experience__info-container').style.textAlign = 'left'; // Alinea el texto a la izquierda
+            }
+        });
+    }
+
+    // Llamamos a la función cuando el DOM esté completamente cargado
+    document.addEventListener('DOMContentLoaded', () => {
+        alternarPosiciones();
+    });

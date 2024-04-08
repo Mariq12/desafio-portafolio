@@ -424,7 +424,7 @@ section.menu {
 
 /* *Sección Experiencia Profesional */
 
-section.experience {
+.experience {
     display: flex;
     justify-content: center;
     align-items: center; /* Centra horizontalmente */
@@ -498,7 +498,8 @@ section.experience {
 }
 
 .experience__botao--repo,
-.experience__botao--demo, button {
+.experience__botao--demo, 
+button {
     width: 120px;
     height: 51px;
     padding: 12px 24px;
@@ -507,7 +508,6 @@ section.experience {
     color: var(--cor-de-link);
     border: 1px solid var(--cor-de-link);
     cursor: pointer;
-
     font-size: 16px;
 }
 
