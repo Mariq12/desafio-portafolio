@@ -49,7 +49,6 @@ https://en.bem.info/methodology/quick-start/*/
 
 section.menu {
     width: 100%;
-    padding: 0 32px;
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido */
     align-items: center; /* Centra verticalmente el contenido */
@@ -84,10 +83,11 @@ section.menu {
     font-size: 16px;
     font-weight: bold;
 }
-
+/* Estilo para el icono de menú */
 .menu__toggle {
     display: none; /* Oculta el icono de menú */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
+    background-color: #01c017;
 }
 
 .menu__nav {
@@ -103,6 +103,7 @@ section.menu {
     font-size: 16px;
     font-size: medium;
     list-style-type: none;
+    background-color: yellow;
 }
 
 /* Estilo para los elementos de la lista del menú */
@@ -121,7 +122,6 @@ section.menu {
     justify-content: center; /* Centra horizontalmente en el viewport */
     align-items: center; /* Centra verticalmente en el viewport */
     width: 100%; /* Ocupa todo el ancho disponible del viewport */
-    padding: 0 32px;
 }
 
 .title__div {
@@ -144,6 +144,7 @@ section.menu {
 .title__container {
     order: 1; /* Cambia el orden del elemento */
     flex: 1; /* El contenido ocupará el espacio restante */
+    background-color: #c712eb;
 }
 
 .title__bio {
@@ -185,7 +186,6 @@ section.menu {
     justify-content: center; /* Centra horizontalmente en el viewport */
     align-items: center; /* Centra verticalmente en el viewport */
     width: 100%; /* Ocupa todo el ancho disponible del viewport */
-    padding: 0 32px;
 }
 
 .about__container {
@@ -213,20 +213,25 @@ section.menu {
 /* *Sección Skills */
 .skills {
     display: flex;
+    justify-content: center; /* Centra horizontalmente en el viewport */
+    align-items: center; /* Centra verticalmente en el viewport */
+    width: 100%; /* Ocupa todo el ancho disponible del viewport */
+}
+
+.skills__container {
+    display: flex;
     flex-direction: column; /* Cambia la disposición a columna */
     justify-content: center; /* Centra verticalmente en el viewport */
     align-items: center; /* Centra horizontalmente */
     width: 100%; /* Ocupa todo el ancho disponible */
-    max-width: 1140px; /* Ancho máximo permitido */
-    background-color: gold;
+    max-width: 1180px; /* Ancho máximo permitido */
+    background-color: rgb(255, 0, 204);
     height: 244px; /* Usar altura completa del viewport */
-    margin: 0 auto ; /* Centra el elemento horizontalmente en la pantalla */
-    padding: 0 20px;
-    margin-left: 118px;
     margin-top: 25px;
 }
 
 .skills__title {
+    background-color: #e02626;
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 24px; /* Espaciado inferior */
@@ -267,16 +272,20 @@ section.menu {
 /* *Sección Hobbies */
 .hobbies {
     display: flex;
+    justify-content: center; /* Centra horizontalmente en el viewport */
+    align-items: center; /* Centra verticalmente en el viewport */
+    width: 100%; /* Ocupa todo el ancho disponible del viewport */
+}
+
+.hobbies__container {
+    display: flex;
     flex-direction: column; /* Cambia la disposición a columna */
     justify-content: center; /* Centra verticalmente en el viewport */
     align-items: center; /* Centra horizontalmente */
     width: 100%; /* Ocupa todo el ancho disponible */
-    max-width: 1140px; /* Ancho máximo permitido */
-    background-color: gold;
+    max-width: 1180px; /* Ancho máximo permitido */
+    background-color: rgb(0, 255, 21);
     height: 244px; /* Usar altura completa del viewport */
-    margin: 0 auto ; /* Centra el elemento horizontalmente en la pantalla */
-    padding: 0 20px;
-    margin-left: 118px;
     margin-top: 25px;
 }
 
@@ -342,8 +351,8 @@ section.menu {
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    max-width: 1136px;
-    background-color: yellow;
+    max-width: 1180px;
+    background-color: rgb(0, 255, 38);
     height: 347px;
      padding: 20px; /* Ajusta el relleno interior */
 }
@@ -354,7 +363,6 @@ section.menu {
     height: 347px;
     margin: 10px; /* Espaciado entre las cajas */
     margin-top: 20px;
-
 }
 
 .academic__courses__list {
@@ -409,43 +417,91 @@ section.menu {
 
 
 /* *Sección Experiencia Profesional */
-.experience {
-    padding: 64px 0;
+
+section.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra horizontalmente */
+    flex-direction: column; /* Cambia la disposición a columna */
+    width: 100%; /* Ocupa todo el ancho disponible del viewport */
+    background-color: #fa8bde;
 }
 
 .experience__section__title {
+    text-align: center; /* Centra el título */
     font-size: 32px;
-    font-weight: 500;
+    font-weight: bold;
+    margin-bottom: 32px; /* Espaciado inferior */
 }
 
 .experience__box {
     display: flex;
-    margin-top: 32px;
+    flex-direction: row; /* Cambia la disposición a fila */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    max-width: 1136px;
+    background-color: rgb(59, 231, 228);
+    height: 406px;
+    margin-top: 24px; /* Espaciado superior */
+    margin-top: 24px; /* Espaciado superior */
+    padding: 20px;
 }
 
 .experience__img {
-    width: 200px;
-    height: 150px;
-    margin-right: 24px;
+    width: 752px;
+    height: 406px;
+    margin-right: 24px; /* Margen derecho para separación */
+    background-color: #ba00c7;
 }
 
-.experience__info {
-    flex: 1;
+.experience__info-container {
+    flex: 1; /* El contenido ocupará el espacio restante */
+    background-color: #01c017;
+    text-align: center;
+    margin-top: 24px;
 }
 
 .experience__title {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: bold;
+    margin-bottom: 8px; /* Espaciado inferior */
+    color: #122ceb;
+    background-color: pink;
 }
 
 .experience__text {
     font-size: 18px;
-    margin-top: 8px;
+    font-weight: normal;
+    margin-bottom: 16px; /* Espaciado inferior */
 }
 
 .experience__description {
-    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 24px;
 }
+
+
+/* Estilos para los botones (repositorio y demo) */
+.experience__repo,
+.experience__demo {
+    margin-top: 12px;
+}
+
+.experience__botao--repo,
+.experience__botao--demo {
+    padding: 12px 24px;
+    margin-right: 12px;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-link);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 
 /* Sección Contacto */
 .formcontato {
