@@ -131,7 +131,7 @@ section.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: aqua;
+    background-color: rgb(21, 0, 255);
 }
 
 .title__profile {
@@ -144,7 +144,7 @@ section.menu {
 .title__container {
     order: 1; /* Cambia el orden del elemento */
     flex: 1; /* El contenido ocupará el espacio restante */
-    background-color: #c712eb;
+    background-color: #ffffff;
 }
 
 .title__bio {
@@ -196,7 +196,7 @@ section.menu {
     width: 100%; /* Ancho máximo permitido */
     max-width: 1180px;
     height: 255px;
-    background-color: red;
+    background-color: #EAF2FD;
 }
 
 .about__title {
@@ -463,94 +463,135 @@ section.experience {
 .experience__info-container {
     flex: 1; /* El contenido ocupará el espacio restante */
     background-color: #01c017;
-    text-align: center;
-    margin-top: 24px;
+    text-align:left;
+    width: 368px;
+    height: 112px;
 }
 
 .experience__title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 8px; /* Espaciado inferior */
     color: #122ceb;
     background-color: pink;
 }
 
 .experience__text {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
-    margin-bottom: 16px; /* Espaciado inferior */
 }
 
 .experience__description {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+
     width: 100%;
-    margin-top: 24px;
+    background-color: #e8fc82;
 }
 
 
 /* Estilos para los botones (repositorio y demo) */
 .experience__repo,
 .experience__demo {
-    margin-top: 12px;
+    font-size: 16px;
+    font-weight:normal;
 }
 
 .experience__botao--repo,
-.experience__botao--demo {
+.experience__botao--demo, button {
+    width: 120px;
+    height: 51px;
     padding: 12px 24px;
     margin-right: 12px;
     background-color: var(--cor-de-fundo);
     color: var(--cor-de-link);
-    border: none;
-    border-radius: 4px;
+    border: 1px solid var(--cor-de-link);
     cursor: pointer;
+
+    font-size: 16px;
 }
 
 
-/* Sección Contacto */
-.formcontato {
-    padding: 64px 0;
+/* *Sección Contacto */
+section.formcontato {
     display: flex;
-    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Cambia la disposición a columna */
+    width: 100%; /* Ocupa todo el ancho disponible del viewport */
+    background-color: #EAF2FD;
+    padding: 64px 32px; /* Ajusta el relleno interior */
+}
+
+.formcontato__contacto {
+    display: flex;
+    justify-content: space-between; /* Espacio entre la imagen y el texto */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Ancho máximo permitido */
+    max-width: 1180px;
+    margin-top: 24px; /* Espaciado superior */
+    height: 660px;
+    background-color: #6bffa9;
+}
+
+.formcontato--box {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    max-width: 1180px;
+    height: 660px;
+    background-color: #f56bff;
 }
 
 .formcontato__img {
-    width: 300px;
-    height: auto;
-    margin-right: 64px;
+    width: 464px;
+    height: 593px;
+    margin-right: 24px;
+}
+
+.formcontato__text {
+    flex: 1; /* El contenido ocupará el espacio restante */
+    background-color: #01c017;
+    text-align:left;
+    width: 660px;
+    height: 596px;
 }
 
 .formcontato__title {
     font-size: 32px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .formcontato__subtext {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 16px;
 }
 
 .formcontato__form {
     margin-top: 32px;
+    
 }
 
 .formcontato__input,
 .formcontato__textarea {
-    width: 100%;
-    padding: 12px;
+    width: 656px;
+    height: 56px;  
     margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: none;
+}
+
+.formcontato__textarea {
+    height: 133px;
 }
 
 .formcontato__botao {
-    padding: 12px 24px;
-    background-color: var(--cor-de-fundo);
+    width: 160px;
+    height: 51px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(229, 255, 0);
     color: var(--cor-de-link);
     border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
