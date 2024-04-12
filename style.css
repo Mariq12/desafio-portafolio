@@ -59,7 +59,7 @@ section.menu {
     max-width: 1136px; /* Ancho máximo permitido */
     height: 88px;
     display: flex;
-    justify-content: space-between; /* Alinea los elementos del encabezado en los extremos */
+    justify-content: center; /* Alinea los elementos del encabezado en los extremos */
     align-items: center; /* Centra verticalmente los elementos del encabezado */
      /* Añade espacio interno a los lados del encabezado */
     background-color: #ffffff; /* Color de fondo del encabezado */
